@@ -11,12 +11,19 @@ let clear = document.querySelector(".clear");
 
 const add = (x, y) => x + y;
 
+const substract = (x, y) => x - y;
+
+console.log(typeof add);
+
 plus?.addEventListener("click", () => {
   let res = add(+numInput1.value, +numInput2.value);
   reult.textContent = res;
 });
 
-minus?.addEventListener("click", () => {});
+minus?.addEventListener("click", () => {
+  let res = substract(+numInput1.value, +numInput2.value);
+  reult.textContent = res;
+});
 
 multiplication?.addEventListener("click", () => {});
 
