@@ -12,8 +12,8 @@ let clear = document.querySelector(".clear");
 const add = (x, y) => x + y;
 
 plus?.addEventListener("click", () => {
-  let sum = add(+numInput1.value, +numInput2.value);
-  reult.textContent = sum;
+  let res = add(+numInput1.value, +numInput2.value);
+  reult.textContent = res;
 });
 
 minus?.addEventListener("click", () => {});
@@ -32,4 +32,4 @@ clear?.addEventListener("click", () => {
   res.textContent = "";
 });
 
-module.exports = { add };
+module.exports = { add, substract };
