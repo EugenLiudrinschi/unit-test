@@ -22,6 +22,9 @@ const divide = (x, y) => {
   return x / y;
 };
 
+const powerNum = (x, y) => Math.pow(x, y);
+
+const sqrtNum = (x) => Math.sqrt(x);
 plus?.addEventListener("click", () => {
   let res = add(+numInput1.value, +numInput2.value);
   result.textContent = res;
@@ -42,9 +45,15 @@ division?.addEventListener("click", () => {
   result.textContent = res;
 });
 
-power?.addEventListener("click", () => {});
+power?.addEventListener("click", () => {
+  let res = powerNum(+numInput1.value, +numInput2.value);
+  result.textContent = res;
+});
 
-square?.addEventListener("click", () => {});
+square?.addEventListener("click", () => {
+  let res = sqrtNum(+numInput1.value);
+  result.textContent = res;
+});
 
 clear?.addEventListener("click", () => {
   numInput1.value = "";
@@ -52,4 +61,4 @@ clear?.addEventListener("click", () => {
   result.textContent = "";
 });
 
-module.exports = { add, substract, multiply, divide };
+module.exports = { add, substract, multiply, divide, powerNum, sqrtNum };
