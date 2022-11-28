@@ -9,7 +9,12 @@ let square = document.querySelector(".square");
 let reult = document.querySelector(".result");
 let clear = document.querySelector(".clear");
 
-plus?.addEventListener("click", () => {});
+const add = (x, y) => x + y;
+
+plus?.addEventListener("click", () => {
+  let sum = add(+numInput1.value, +numInput2.value);
+  reult.textContent = sum;
+});
 
 minus?.addEventListener("click", () => {});
 
