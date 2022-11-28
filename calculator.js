@@ -13,8 +13,6 @@ const add = (x, y) => x + y;
 
 const substract = (x, y) => x - y;
 
-console.log(typeof add);
-
 plus?.addEventListener("click", () => {
   let res = add(+numInput1.value, +numInput2.value);
   reult.textContent = res;
