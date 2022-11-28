@@ -6,26 +6,41 @@ let multiplication = document.querySelector(".multiplication");
 let division = document.querySelector(".division");
 let power = document.querySelector(".power");
 let square = document.querySelector(".square");
-let reult = document.querySelector(".result");
+let result = document.querySelector(".result");
 let clear = document.querySelector(".clear");
 
 const add = (x, y) => x + y;
 
 const substract = (x, y) => x - y;
 
+const multiply = (x, y) => x * y;
+
+const divide = (x, y) => {
+  if (y === 0) {
+    return "error";
+  }
+  return x / y;
+};
+
 plus?.addEventListener("click", () => {
   let res = add(+numInput1.value, +numInput2.value);
-  reult.textContent = res;
+  result.textContent = res;
 });
 
 minus?.addEventListener("click", () => {
   let res = substract(+numInput1.value, +numInput2.value);
-  reult.textContent = res;
+  result.textContent = res;
 });
 
-multiplication?.addEventListener("click", () => {});
+multiplication?.addEventListener("click", () => {
+  let res = multiply(+numInput1.value, +numInput2.value);
+  result.textContent = res;
+});
 
-division?.addEventListener("click", () => {});
+division?.addEventListener("click", () => {
+  let res = divide(+numInput1.value, +numInput2.value);
+  result.textContent = res;
+});
 
 power?.addEventListener("click", () => {});
 
@@ -34,7 +49,7 @@ square?.addEventListener("click", () => {});
 clear?.addEventListener("click", () => {
   numInput1.value = "";
   numInput2.value = "";
-  res.textContent = "";
+  result.textContent = "";
 });
 
-module.exports = { add, substract };
+module.exports = { add, substract, multiply, divide };
